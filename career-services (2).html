@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Services | ACP Recruiters</title>
+  <meta name="description" content="Resume strategy, LinkedIn positioning, and interview prep for medical device and pharma sales professionals.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:       #0A1628;
+      --navy-mid:   #122240;
+      --gold:       #C4993C;
+      --gold-light: #D9B86A;
+      --gold-pale:  #F5EDD6;
+      --cream:      #FAF8F3;
+      --text-body:  #3D4A5C;
+      --text-muted: #7A8899;
+      --border:     rgba(10,22,40,0.10);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      color: var(--navy);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 18px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(250,248,243,0.94);
+      backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--navy);
+      text-decoration: none;
+    }
+    .logo span { color: var(--gold); }
+
+    .nav-back {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-body);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.2s;
+    }
+
+    .nav-back:hover { color: var(--navy); }
+
+    .nav-back svg {
+      width: 14px;
+      height: 14px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .nav-cta {
+      padding: 10px 28px;
+      background: var(--navy);
+      color: var(--cream);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      border-radius: 3px;
+      transition: background 0.2s;
+    }
+
+    .nav-cta:hover { background: var(--navy-mid); }
+
+    /* HERO */
+    .page-hero {
+      background: var(--navy);
+      padding: 140px 60px 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -5%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(196,153,60,0.10) 0%, transparent 65%);
+    }
+
+    .page-hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+    }
+
+    .page-hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+
+    .page-hero-eyebrow::before {
+      content: '';
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 4.5vw, 58px);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+
+    .page-hero h1 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .page-hero p {
+      font-size: 17px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.75;
+    }
+
+    /* SECTION */
+    section { padding: 90px 60px; }
+
+    .section-label {
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 3vw, 42px);
+      font-weight: 700;
+      line-height: 1.14;
+      color: var(--navy);
+      margin-bottom: 18px;
+    }
+
+    .section-sub {
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--text-body);
+      line-height: 1.7;
+      max-width: 540px;
+    }
+
+    /* PACKAGES */
+    #packages {
+      background: #fff;
+    }
+
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 56px;
+    }
+
+    .package-card {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      transition: box-shadow 0.25s, border-color 0.25s;
+      position: relative;
+    }
+
+    .package-card:hover {
+      box-shadow: 0 8px 32px rgba(10,22,40,0.10);
+      border-color: rgba(10,22,40,0.18);
+    }
+
+    .package-card.featured {
+      border-color: var(--gold);
+      box-shadow: 0 8px 40px rgba(196,153,60,0.15);
+    }
+
+    .package-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 4px 12px;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-radius: 30px;
+    }
+
+    .package-header {
+      padding: 36px 32px 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .package-name {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .package-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 14px;
+    }
+
+    .package-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1;
+    }
+
+    .package-price span {
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--text-muted);
+      margin-left: 4px;
+    }
+
+    .package-desc {
+      margin-top: 14px;
+      font-size: 13.5px;
+      font-weight: 300;
+      color: var(--text-body);
+      line-height: 1.6;
+    }
+
+    .package-body {
+      padding: 28px 32px 36px;
+    }
+
+    .package-includes {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .package-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .package-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 13.5px;
+      font-weight: 400;
+      color: var(--text-body);
+      line-height: 1.5;
+    }
+
+    .package-feature::before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C4993C' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/contain no-repeat;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .package-cta {
+      display: block;
+      width: 100%;
+      padding: 13px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      border-radius: 3px;
+      transition: all 0.2s;
+    }
+
+    .package-cta-outline {
+      border: 1.5px solid var(--navy);
+      color: var(--navy);
+    }
+
+    .package-cta-outline:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .package-cta-solid {
+      background: var(--navy);
+      color: #fff;
+      border: 1.5px solid var(--navy);
+    }
+
+    .package-cta-solid:hover { background: var(--navy-mid); }
+
+    /* WHO ITS FOR */
+    #who {
+      background: var(--cream);
+    }
+
+    .who-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      margin-top: 56px;
+      align-items: start;
+    }
+
+    .who-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .who-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 20px 24px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+    }
+
+    .who-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--gold-pale);
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .who-item-text h5 {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .who-item-text p {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--text-body);
+      line-height: 1.55;
+    }
+
+    .who-right {
+      background: var(--navy);
+      border-radius: 6px;
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .who-right::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    }
+
+    .who-right h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: 24px;
+    }
+
+    .process-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .process-list-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .process-list-item:last-child { border-bottom: none; }
+
+    .process-step-num {
+      width: 28px;
+      height: 28px;
+      border: 1px solid rgba(196,153,60,0.40);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .process-list-item-text h6 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 3px;
+    }
+
+    .process-list-item-text p {
+      font-size: 12.5px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.50);
+      line-height: 1.55;
+    }
+
+    /* CTA STRIP */
+    .cta-strip {
+      background: var(--navy);
+      padding: 80px 60px;
+      text-align: center;
+    }
+
+    .cta-strip h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 3vw, 42px);
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .cta-strip p {
+      font-size: 16px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.60);
+      margin-bottom: 40px;
+    }
+
+    .cta-strip-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-gold {
+      padding: 14px 36px;
+      background: var(--gold);
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 600;
+      border-radius: 3px;
+      transition: background 0.2s;
+    }
+
+    .btn-gold:hover { background: var(--gold-light); }
+
+    .btn-outline-white {
+      padding: 14px 36px;
+      border: 1px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.80);
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 500;
+      border-radius: 3px;
+      transition: all 0.2s;
+    }
+
+    .btn-outline-white:hover { border-color: rgba(255,255,255,0.55); color: #fff; }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy);
+      padding: 40px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .footer-logo span { color: var(--gold); }
+
+    .footer-copy {
+      font-size: 12.5px;
+      color: rgba(255,255,255,0.35);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-links a {
+      font-size: 12.5px;
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--gold); }
+
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      section { padding: 70px 24px; }
+      .page-hero { padding: 120px 24px 80px; }
+      .packages-grid { grid-template-columns: 1fr; }
+      .who-grid { grid-template-columns: 1fr; gap: 40px; }
+      footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
+      .cta-strip { padding: 60px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="index.html">ACP <span>Recruiters</span></a>
+  <a class="nav-back" href="index.html">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Back to Main Site
+  </a>
+  <a href="mailto:julie@acprecruiters.com?subject=Career Services Inquiry" class="nav-cta">Get Started</a>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow">Career Services</div>
+    <h1>Land Your Next Role in <em>Medical Device or Pharma</em> Sales</h1>
+    <p>Resume rewrites, LinkedIn positioning, and interview preparation built specifically for quota-carrying sales professionals in the medical space.</p>
+  </div>
+</div>
+
+<!-- PACKAGES -->
+<section id="packages">
+  <div class="section-label">Coaching Packages</div>
+  <h2 class="section-title">Choose Your Level</h2>
+  <p class="section-sub">Every package is written for the medical device and pharma sales market. No generic career coaching. No templates from a job board.</p>
+
+  <div class="packages-grid">
+
+    <!-- STARTER -->
+    <div class="package-card">
+      <div class="package-header">
+        <div class="package-name">Starter</div>
+        <div class="package-title">Resume Rewrite</div>
+        <div class="package-price">$500<span>one-time</span></div>
+        <p class="package-desc">A professionally rewritten resume built for ATS systems and hiring managers in medical device and pharma sales.</p>
+      </div>
+      <div class="package-body">
+        <div class="package-includes">What's Included</div>
+        <ul class="package-features">
+          <li class="package-feature">Professional resume rewrite (1 revision)</li>
+          <li class="package-feature">ATS keyword optimization for med device / pharma roles</li>
+          <li class="package-feature">Quota attainment and performance language</li>
+          <li class="package-feature">Delivered in 5 to 7 business days</li>
+        </ul>
+        <a href="mailto:julie@acprecruiters.com?subject=Career Services — Resume Rewrite ($500)" class="package-cta package-cta-outline">Get Started</a>
+      </div>
+    </div>
+
+    <!-- FEATURED -->
+    <div class="package-card featured">
+      <div class="package-badge">Most Popular</div>
+      <div class="package-header">
+        <div class="package-name">Professional</div>
+        <div class="package-title">Elite Interview Prep</div>
+        <div class="package-price">$1,999<span>one-time</span></div>
+        <p class="package-desc">Full career positioning package with resume, LinkedIn optimization, and two live coaching sessions focused on landing interviews and closing offers.</p>
+      </div>
+      <div class="package-body">
+        <div class="package-includes">What's Included</div>
+        <ul class="package-features">
+          <li class="package-feature">Everything in Resume Rewrite</li>
+          <li class="package-feature">LinkedIn profile rewrite and headline optimization</li>
+          <li class="package-feature">Two 60-minute live coaching sessions (Zoom)</li>
+          <li class="package-feature">Interview prep: STAR format, territory business plan coaching</li>
+          <li class="package-feature">Offer evaluation and negotiation guidance</li>
+          <li class="package-feature">30-day email support post-delivery</li>
+        </ul>
+        <a href="mailto:julie@acprecruiters.com?subject=Career Services — Elite Interview Prep ($1,999)" class="package-cta package-cta-solid">Get Started</a>
+      </div>
+    </div>
+
+    <!-- EXECUTIVE -->
+    <div class="package-card">
+      <div class="package-header">
+        <div class="package-name">Executive</div>
+        <div class="package-title">Full Career Campaign</div>
+        <div class="package-price">$5,000<span>one-time</span></div>
+        <p class="package-desc">A fully managed job search campaign for senior sales professionals and sales leaders targeting regional or national roles at top med device and pharma companies.</p>
+      </div>
+      <div class="package-body">
+        <div class="package-includes">What's Included</div>
+        <ul class="package-features">
+          <li class="package-feature">Everything in Elite Interview Prep</li>
+          <li class="package-feature">Four 60-minute coaching sessions over 60 days</li>
+          <li class="package-feature">Target company and territory strategy development</li>
+          <li class="package-feature">Introduction to ACP's hiring manager network</li>
+          <li class="package-feature">Custom 30-60-90 day business plan template</li>
+          <li class="package-feature">Counter-offer and close coaching</li>
+          <li class="package-feature">60-day email support throughout search</li>
+        </ul>
+        <a href="mailto:julie@acprecruiters.com?subject=Career Services — Full Career Campaign ($5,000)" class="package-cta package-cta-outline">Get Started</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section id="who">
+  <div class="section-label">Who It's For</div>
+  <div class="who-grid">
+    <div class="who-left">
+      <h2 class="section-title">Built for Med Device &amp; Pharma Sales Professionals</h2>
+      <p class="section-sub" style="margin-bottom: 36px;">Whether you're a territory rep targeting a step-up or a regional manager going for a VP seat, our coaching is built around how hiring managers in this industry actually evaluate candidates.</p>
+      <ul class="who-list">
+        <li class="who-item">
+          <div class="who-num">01</div>
+          <div class="who-item-text">
+            <h5>Territory Reps Ready to Move Up</h5>
+            <p>Associate or territory-level reps targeting a senior TM or clinical specialist role at a top-tier company.</p>
+          </div>
+        </li>
+        <li class="who-item">
+          <div class="who-num">02</div>
+          <div class="who-item-text">
+            <h5>Sales Managers Pursuing Leadership</h5>
+            <p>District and regional managers who need stronger executive presence positioning for VP-level moves.</p>
+          </div>
+        </li>
+        <li class="who-item">
+          <div class="who-num">03</div>
+          <div class="who-item-text">
+            <h5>Professionals Transitioning Into the Space</h5>
+            <p>Strong sellers from adjacent industries who need to reposition their experience to land in med device or pharma.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="who-right">
+      <h4>How the Process Works</h4>
+      <ul class="process-list">
+        <li class="process-list-item">
+          <div class="process-step-num">1</div>
+          <div class="process-list-item-text">
+            <h6>Discovery Call</h6>
+            <p>30-minute call to understand your background, target role, and timeline. No cost.</p>
+          </div>
+        </li>
+        <li class="process-list-item">
+          <div class="process-step-num">2</div>
+          <div class="process-list-item-text">
+            <h6>Package Selection</h6>
+            <p>We recommend the right package based on your goals and where you are in the search.</p>
+          </div>
+        </li>
+        <li class="process-list-item">
+          <div class="process-step-num">3</div>
+          <div class="process-list-item-text">
+            <h6>Resume &amp; LinkedIn Overhaul</h6>
+            <p>We rewrite both through the lens of a hiring manager at J&amp;J, Stryker, or Medtronic.</p>
+          </div>
+        </li>
+        <li class="process-list-item">
+          <div class="process-step-num">4</div>
+          <div class="process-list-item-text">
+            <h6>Interview Coaching</h6>
+            <p>Live sessions covering STAR storytelling, business plan presentation, and closing the offer.</p>
+          </div>
+        </li>
+        <li class="process-list-item">
+          <div class="process-step-num">5</div>
+          <div class="process-list-item-text">
+            <h6>Ongoing Support</h6>
+            <p>Email access to Julie through your active search for real-time feedback and strategy.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<div class="cta-strip">
+  <h2>Ready to Invest in Your Next Move?</h2>
+  <p>Send an email and Julie will schedule a free 30-minute discovery call within one business day.</p>
+  <div class="cta-strip-actions">
+    <a href="mailto:julie@acprecruiters.com?subject=Career Services — Discovery Call" class="btn-gold">Book a Discovery Call</a>
+    <a href="index.html#contact" class="btn-outline-white">Back to Main Site</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">ACP <span>Recruiters</span></div>
+  <div class="footer-copy">&copy; 2026 ACP Recruiters. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#process">Our Process</a>
+    <a href="mailto:julie@acprecruiters.com">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>

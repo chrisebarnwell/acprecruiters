@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACP Recruiters | Medical Device Sales Recruiting</title>
+  <meta name="description" content="ACP Recruiters places top-performing medical device sales talent. Boutique precision. Enterprise results.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:      #0A1628;
+      --navy-2:    #0F2040;
+      --gold:      #C4993C;
+      --gold-lt:   #D9B86A;
+      --cream:     #F7F4EF;
+      --off-white: #EDEAE3;
+      --muted:     #6B7585;
+      --border:    rgba(10,22,40,0.10);
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--cream);
+      color: var(--navy);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 56px;
+      background: rgba(247,244,239,0.96);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .wordmark {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      text-decoration: none;
+    }
+    .wordmark em { font-style: normal; color: var(--gold); }
+
+    .nav-right { display: flex; align-items: center; gap: 40px; }
+
+    .nav-link {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--navy); }
+
+    .nav-pill {
+      padding: 9px 26px;
+      border: 1.5px solid var(--navy);
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 12.5px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: all 0.22s;
+    }
+    .nav-pill:hover { background: var(--navy); color: var(--cream); }
+
+    /* HERO — SPLIT */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 80px;
+    }
+
+    .hero-left {
+      background: var(--navy);
+      padding: 100px 72px 80px 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-left::before {
+      content: 'ACP';
+      position: absolute;
+      bottom: -40px;
+      right: -30px;
+      font-family: 'Playfair Display', serif;
+      font-size: 260px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.025);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .hero-eyebrow::before {
+      content: '';
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(46px, 5vw, 74px);
+      font-weight: 700;
+      line-height: 1.05;
+      color: #fff;
+      letter-spacing: -1px;
+      position: relative;
+      z-index: 1;
+      margin: 40px 0;
+    }
+
+    .hero-headline em {
+      font-style: italic;
+      color: var(--gold-lt);
+      display: block;
+    }
+
+    .hero-descriptor {
+      font-size: 15px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.75;
+      max-width: 420px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      margin-top: 48px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-primary {
+      padding: 13px 32px;
+      background: var(--gold);
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .cta-primary:hover { background: var(--gold-lt); transform: translateY(-2px); }
+
+    .cta-text {
+      padding: 13px 0;
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.2s;
+    }
+    .cta-text:hover { color: rgba(255,255,255,0.80); }
+    .cta-text svg { width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+
+    .hero-right {
+      background: var(--off-white);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-right-inner {
+      padding: 80px 56px 60px 64px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-stat-row {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .hero-stat {
+      padding: 26px 30px;
+      border-bottom: 1px solid var(--border);
+      background: #fff;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      transition: background 0.2s;
+    }
+    .hero-stat:last-child { border-bottom: none; }
+    .hero-stat:hover { background: var(--cream); }
+
+    .hero-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1;
+      flex-shrink: 0;
+      min-width: 92px;
+    }
+
+    .hero-stat-label {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .hero-stat-label strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+    .hero-stat-label cite {
+      display: block;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 5px;
+    }
+    .hero-stat-label cite a {
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(196,153,60,0.35);
+      transition: border-color 0.2s;
+    }
+    .hero-stat-label cite a:hover { border-color: var(--gold); }
+
+    .hero-clients-bar {
+      padding: 22px 64px;
+      border-top: 1px solid var(--border);
+      background: #fff;
+    }
+
+    .clients-bar-label {
+      font-size: 9.5px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .clients-names { display: flex; gap: 32px; align-items: center; }
+
+    .client-chip {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--navy);
+      opacity: 0.55;
+      letter-spacing: 0.2px;
+    }
+
+    /* GOLD RULE */
+    .gold-rule {
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold) 0%, var(--gold-lt) 50%, transparent 100%);
+    }
+
+    /* SHARED */
+    .sec-tag {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+
+    .sec-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 2.8vw, 42px);
+      font-weight: 700;
+      line-height: 1.12;
+      color: var(--navy);
+    }
+
+    /* POSITIONING */
+    #positioning {
+      padding: 120px 56px;
+      background: var(--cream);
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 100px;
+      align-items: start;
+    }
+
+    .pos-lead {
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--navy);
+      line-height: 1.72;
+      border-left: 3px solid var(--gold);
+      padding-left: 24px;
+      margin-bottom: 28px;
+    }
+
+    .pos-body {
+      font-size: 14.5px;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.85;
+    }
+
+    /* STATEMENT */
+    #statement {
+      background: var(--navy);
+      padding: 100px 56px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #statement::before {
+      content: '"';
+      position: absolute;
+      top: -80px;
+      left: 20px;
+      font-family: 'Playfair Display', serif;
+      font-size: 420px;
+      color: rgba(196,153,60,0.04);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .statement-inner {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 80px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .statement-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(24px, 2.8vw, 40px);
+      font-style: italic;
+      color: rgba(255,255,255,0.88);
+      line-height: 1.45;
+    }
+    .statement-quote strong { font-style: normal; color: var(--gold-lt); }
+
+    .statement-aside {
+      border-left: 1px solid rgba(196,153,60,0.22);
+      padding-left: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    .aside-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 44px;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .aside-stat-label {
+      font-size: 12.5px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.42);
+      line-height: 1.55;
+    }
+
+    /* PROCESS */
+    #process {
+      padding: 120px 56px;
+      background: #fff;
+    }
+
+    .process-header { margin-bottom: 64px; }
+
+    .process-header-body {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.75;
+      max-width: 480px;
+      margin-top: 12px;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .step {
+      padding: 40px 32px;
+      border-right: 1px solid var(--border);
+    }
+    .step:last-child { border-right: none; }
+
+    .step-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px;
+      font-weight: 700;
+      color: var(--off-white);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .step-rule { width: 28px; height: 2px; background: var(--gold); margin-bottom: 18px; }
+    .step h4 { font-size: 14.5px; font-weight: 600; color: var(--navy); margin-bottom: 10px; }
+    .step p { font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.65; }
+
+    /* ROLES */
+    #roles {
+      padding: 120px 56px;
+      background: var(--cream);
+    }
+
+    .roles-header { margin-bottom: 56px; }
+
+    .roles-header-body {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.75;
+      max-width: 560px;
+      margin-top: 12px;
+    }
+
+    .roles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .role-tile {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .role-tile::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s;
+    }
+
+    .role-tile:hover { border-color: rgba(10,22,40,0.18); box-shadow: 0 4px 20px rgba(10,22,40,0.07); }
+    .role-tile:hover::after { transform: scaleX(1); }
+
+    /* High-value badge */
+    .role-tile.featured {
+      border-color: rgba(196,153,60,0.30);
+    }
+    .role-tile.featured::after { transform: scaleX(1); }
+
+    .role-tag {
+      font-size: 9.5px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .role-tile h4 { font-size: 15.5px; font-weight: 600; color: var(--navy); margin-bottom: 7px; }
+    .role-tile p { font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.6; }
+
+    .role-comp {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--navy);
+      background: var(--cream);
+      padding: 4px 10px;
+      border-radius: 2px;
+      border: 1px solid var(--border);
+    }
+
+    /* CONTACT */
+    #contact {
+      background: var(--navy);
+      padding: 120px 56px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #contact::after {
+      content: '';
+      position: absolute;
+      bottom: -20%;
+      right: -8%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(196,153,60,0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .contact-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 640px;
+    }
+
+    .contact-tag {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+
+    .contact-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(30px, 3.2vw, 52px);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .contact-desc {
+      font-size: 15px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.50);
+      line-height: 1.75;
+      margin-bottom: 56px;
+      max-width: 500px;
+    }
+
+    .contact-details { display: flex; flex-direction: column; gap: 20px; }
+
+    .c-detail { display: flex; align-items: center; gap: 20px; }
+
+    .c-icon {
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(196,153,60,0.28);
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .c-icon svg { width:16px; height:16px; stroke:var(--gold); fill:none; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
+
+    .c-lbl { font-size: 9.5px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 4px; }
+    .c-val, .c-val a { font-size: 15.5px; font-weight: 500; color: rgba(255,255,255,0.82); text-decoration: none; transition: color 0.2s; }
+    .c-val a:hover { color: var(--gold-lt); }
+
+    /* CAREER BAND */
+    .career-band {
+      background: var(--off-white);
+      border-top: 1px solid var(--border);
+      padding: 46px 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .cb-label { font-size: 10px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+    .cb-title { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 700; color: var(--navy); }
+    .cb-sub { font-size: 13px; font-weight: 300; color: var(--muted); margin-top: 4px; }
+
+    .cb-cta {
+      padding: 11px 28px;
+      border: 1.5px solid var(--navy);
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 12.5px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-radius: 2px;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .cb-cta:hover { background: var(--navy); color: var(--cream); }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy);
+      padding: 34px 56px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .footer-word { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: rgba(255,255,255,0.55); }
+    .footer-word em { font-style: normal; color: var(--gold); }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.26); }
+    .footer-links { display: flex; gap: 28px; }
+    .footer-links a { font-size: 12px; color: rgba(255,255,255,0.32); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+
+    /* RESPONSIVE */
+    @media (max-width: 1100px) {
+      nav { padding: 18px 28px; }
+      .nav-link { display: none; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-left { padding: 100px 28px 72px; }
+      .hero-right-inner { padding: 56px 28px; }
+      .hero-clients-bar { padding: 22px 28px; }
+      #positioning { grid-template-columns: 1fr; gap: 48px; padding: 80px 28px; }
+      .statement-inner { grid-template-columns: 1fr; gap: 48px; }
+      #statement, #process, #roles, #contact { padding: 80px 28px; }
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .roles-grid { grid-template-columns: 1fr 1fr; }
+      .career-band { flex-direction: column; align-items: flex-start; padding: 40px 28px; }
+      footer { flex-direction: column; gap: 14px; text-align: center; padding: 30px 28px; }
+    }
+
+    @media (max-width: 640px) {
+      .hero-ctas { flex-direction: column; align-items: flex-start; }
+      .process-steps, .roles-grid { grid-template-columns: 1fr; }
+      .clients-names { flex-wrap: wrap; gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="wordmark" href="#">ACP <em>Recruiters</em></a>
+  <div class="nav-right">
+    <a href="#positioning" class="nav-link">About</a>
+    <a href="#process" class="nav-link">Process</a>
+    <a href="#roles" class="nav-link">Specialties</a>
+    <a href="career-services.html" class="nav-link">Career Services</a>
+    <a href="#contact" class="nav-pill">Start a Search</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Medical Device Sales Recruiting</div>
+    <div>
+      <h1 class="hero-headline">
+        Boutique Precision.
+        <em>Enterprise Results.</em>
+      </h1>
+      <p class="hero-descriptor">We built ACP from the field up. We have sold devices, worked territories, and know what it takes to carry a number. That is why our placements perform.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="cta-primary">Submit a Search</a>
+        <a href="#process" class="cta-text">
+          See how we work
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+    <div></div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-right-inner">
+      <div class="hero-stat-row">
+        <div class="hero-stat">
+          <div class="hero-stat-num">$240K</div>
+          <div class="hero-stat-label">
+            <strong>Average cost of a bad sales hire</strong>
+            Recruiting, onboarding, ramp time, and vacant territory revenue combined.
+            <cite><a href="https://www.shrm.org/topics-tools/news/talent-acquisition/cost-of-a-bad-hire" target="_blank" rel="noopener">Source: SHRM</a></cite>
+          </div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">73%</div>
+          <div class="hero-stat-label">
+            <strong>Of top performers are passive candidates</strong>
+            They are not applying anywhere. You have to go get them.
+            <cite><a href="https://business.linkedin.com/talent-solutions/resources/talent-acquisition/job-market-update" target="_blank" rel="noopener">Source: LinkedIn Talent Trends</a></cite>
+          </div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">$115K</div>
+          <div class="hero-stat-label">
+            <strong>To replace one sales rep</strong>
+            Fully loaded: lost accounts, ramp time, and competitive ground surrendered.
+            <cite><a href="https://www.dallashunter.com/blog/sales-rep-turnover-costs" target="_blank" rel="noopener">Source: DePaul University Sales Research</a></cite>
+          </div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">$0</div>
+          <div class="hero-stat-label">
+            <strong>Upfront cost</strong>
+            Contingency model. You pay when you make the hire.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-clients-bar">
+      <div class="clients-bar-label">Clients Include</div>
+      <div class="clients-names">
+        <span class="client-chip">Johnson &amp; Johnson</span>
+        <span class="client-chip">Stryker</span>
+        <span class="client-chip">Arthrex</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="gold-rule"></div>
+
+<!-- POSITIONING -->
+<section id="positioning">
+  <div>
+    <div class="sec-tag">Who We Are</div>
+    <h2 class="sec-title">We Operate in the Industry. We Do Not Just Recruit for It.</h2>
+  </div>
+  <div>
+    <p class="pos-lead">ACP Recruiters is a search firm built by people who have carried medical device quotas, worked operating rooms, and navigated IDN procurement. That experience is not a talking point. It is how we evaluate every candidate we submit.</p>
+    <p class="pos-body">We run a boutique practice. That means a limited number of active searches at any time, and every search treated as a priority. Our evaluations are written through a hiring manager lens. You receive a scored submission memo, not a stack of unscreened resumes. If a candidate does not pass our threshold, they do not reach your inbox. We place from territory-level roles all the way to C-Suite, and we bring the same rigor to every level of the search.</p>
+  </div>
+</section>
+
+<!-- STATEMENT -->
+<section id="statement">
+  <div class="statement-inner">
+    <blockquote class="statement-quote">
+      "The best candidates in medical device are not browsing job boards. They are holding territory, closing accounts, and fielding calls from managers who want to keep them. <strong>Getting to them requires relationships, credibility, and timing.</strong>"
+    </blockquote>
+    <div class="statement-aside">
+      <div>
+        <div class="aside-stat-num">&lt;10</div>
+        <div class="aside-stat-label">Active searches at any given time. Every client gets the full attention of the firm.</div>
+      </div>
+      <div>
+        <div class="aside-stat-num">5–7</div>
+        <div class="aside-stat-label">Business days to first qualified submission. Screened, scored, and ready for review.</div>
+      </div>
+      <div>
+        <div class="aside-stat-num">Day 1</div>
+        <div class="aside-stat-label">Sourcing begins the day the search brief is signed. No lag, no queue.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="process-header">
+    <div class="sec-tag">How It Works</div>
+    <h2 class="sec-title">From Brief to Offer</h2>
+    <p class="process-header-body">We do not run volume. Every search follows a defined process that produces qualified submissions fast, without noise.</p>
+  </div>
+  <div class="process-steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-rule"></div>
+      <h4>Search Brief</h4>
+      <p>Thirty minutes with your hiring manager. We define what great looks like for this territory, call point, and culture before we source a single name.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-rule"></div>
+      <h4>Targeted Sourcing</h4>
+      <p>We go directly to candidates currently performing at your competitors. Passive outreach only. No job board scraping.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-rule"></div>
+      <h4>Screen and Score</h4>
+      <p>Every candidate is evaluated on territory fit, clinical or functional experience, performance record, and compensation alignment. If they do not score, you do not see them.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <div class="step-rule"></div>
+      <h4>Submission and Close</h4>
+      <p>You receive a submission memo with scoring rationale. We stay engaged through offer, counter-offer, and onboarding.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ROLES -->
+<section id="roles">
+  <div class="roles-header">
+    <div class="sec-tag">Specialties</div>
+    <h2 class="sec-title">Roles We Fill</h2>
+    <p class="roles-header-body">From territory-level field sales to C-Suite commercial leadership, we place across medical device and MedTech. Higher-impact roles are where we differentiate most.</p>
+  </div>
+  <div class="roles-grid">
+
+    <!-- HIGH VALUE ROLES FIRST -->
+    <div class="role-tile featured">
+      <div class="role-tag">Executive</div>
+      <h4>C-Suite &amp; President</h4>
+      <p>Chief Commercial Officer, Chief Revenue Officer, VP of Sales, and President of commercial divisions at medical device and MedTech companies.</p>
+      <span class="role-comp">$300K+ OTE</span>
+    </div>
+
+    <div class="role-tile featured">
+      <div class="role-tag">Senior Leadership</div>
+      <h4>Vice President of Sales</h4>
+      <p>National and divisional VP roles with full P&amp;L accountability, team leadership, and board-level reporting responsibilities.</p>
+      <span class="role-comp">$250K+ OTE</span>
+    </div>
+
+    <div class="role-tile featured">
+      <div class="role-tag">Director Level</div>
+      <h4>Director of Sales</h4>
+      <p>Commercial directors managing regional teams, key account strategy, and field execution across large geographies.</p>
+      <span class="role-comp">$200K+ OTE</span>
+    </div>
+
+    <div class="role-tile featured">
+      <div class="role-tag">Engineering &amp; R&amp;D</div>
+      <h4>Engineering &amp; R&amp;D Leadership</h4>
+      <p>Director and VP-level roles in product development, clinical engineering, and regulatory affairs at device and MedTech companies.</p>
+      <span class="role-comp">$180K+ Base</span>
+    </div>
+
+    <div class="role-tile">
+      <div class="role-tag">Management</div>
+      <h4>Regional Business Manager</h4>
+      <p>Senior commercial leadership with P&amp;L responsibility and multi-state team management.</p>
+      <span class="role-comp">$160K+ OTE</span>
+    </div>
+
+    <div class="role-tile">
+      <div class="role-tag">Management</div>
+      <h4>Regional Sales Manager</h4>
+      <p>Player-coach leadership managing field rep teams across multi-state territories with full quota accountability.</p>
+      <span class="role-comp">$130K+ OTE</span>
+    </div>
+
+    <div class="role-tile">
+      <div class="role-tag">Field Sales</div>
+      <h4>Territory Manager</h4>
+      <p>Individual quota-carrying field rep. The core of every commercial placement we make.</p>
+      <span class="role-comp">$100K+ OTE</span>
+    </div>
+
+    <div class="role-tile">
+      <div class="role-tag">Clinical</div>
+      <h4>Clinical Account Specialist</h4>
+      <p>OR-facing roles requiring deep product fluency, procedural credibility, and strong surgeon relationships.</p>
+    </div>
+
+    <div class="role-tile">
+      <div class="role-tag">Strategic Accounts</div>
+      <h4>National Accounts / IDN</h4>
+      <p>Complex account roles targeting health systems, GPOs, and formulary committees.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="contact-tag">Start a Search</div>
+    <h2 class="contact-title">Ready to Fill Your Open Role?</h2>
+    <p class="contact-desc">Whether you need to fill a seat this quarter or build a bench for a new launch, reach out directly. All searches are confidential. We respond within one business day.</p>
+    <div class="contact-details">
+      <div class="c-detail">
+        <div class="c-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div>
+          <div class="c-lbl">Email</div>
+          <div class="c-val"><a href="mailto:julie@acprecruiters.com">julie@acprecruiters.com</a></div>
+        </div>
+      </div>
+      <div class="c-detail">
+        <div class="c-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.47 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.12 6.12l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div>
+          <div class="c-lbl">Phone</div>
+          <div class="c-val"><a href="tel:2137256572">(213) 725-6572</a></div>
+        </div>
+      </div>
+      <div class="c-detail">
+        <div class="c-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="c-lbl">Response Time</div>
+          <div class="c-val">Within one business day</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER BAND -->
+<div class="career-band">
+  <div>
+    <div class="cb-label">For Candidates</div>
+    <div class="cb-title">Looking for Your Next Role in Medical Device Sales?</div>
+    <div class="cb-sub">Resume strategy, LinkedIn positioning, and interview coaching built for the device space.</div>
+  </div>
+  <a href="career-services.html" class="cb-cta">View Career Services</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-word">ACP <em>Recruiters</em></div>
+  <div class="footer-copy">&copy; 2026 ACP Recruiters. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="#positioning">About</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
+    <a href="career-services.html">Career Services</a>
+  </div>
+</footer>
+
+</body>
+</html>
