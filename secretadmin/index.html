@@ -1,3 +1,252 @@
-<meta http-equiv="refresh" content="0; url=https://script.google.com/a/macros/athletecareerpartners.com/s/AKfycbwiWxd1NQu9iUBGyKN7Dnu--oUMqe258gRPCjfyl9kOD_gryXjMxL003QmAY0cuCM-W/exec">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
-<title>ACP</title>
+<title>Whiteboard | ACP Recruiters</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0A1628;--gold:#C4993C;--cream:#F7F4EF;--off-white:#EDEAE3;--muted:#6B7585;--border:rgba(10,22,40,0.10);--white:#fff;--frame:#cfd2d7}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Outfit',sans-serif;background:var(--cream);color:var(--navy);-webkit-font-smoothing:antialiased}
+nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:22px 56px;background:rgba(247,244,239,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.wordmark{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--navy);text-decoration:none}
+.wordmark em{font-style:normal;color:var(--gold)}
+.nav-right{display:flex;align-items:center;gap:28px}
+.nav-link{font-size:13px;font-weight:500;color:var(--muted);background:none;border:0;cursor:pointer;font-family:inherit}
+.nav-link:hover{color:var(--navy)}
+.nav-pill{padding:9px 22px;border:1.5px solid var(--navy);color:var(--navy);background:none;font:600 12.5px 'Outfit',sans-serif;letter-spacing:1px;text-transform:uppercase;border-radius:2px;cursor:pointer}
+.nav-pill:hover{background:var(--navy);color:var(--cream)}
+main{background:var(--off-white);min-height:calc(100vh - 70px);padding:40px 56px 64px}
+.wrap{max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:26px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.head h1{font-family:'Playfair Display',serif;font-size:40px;font-weight:700;line-height:1.1;margin-top:10px}
+.head h1 em{color:var(--gold)}
+.date{font-size:13px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{background:var(--white);border:1px solid var(--border);border-radius:4px;padding:22px 24px;display:flex;flex-direction:column;gap:12px;min-width:0;box-shadow:0 1px 2px rgba(10,22,40,.04)}
+.card-h{display:flex;align-items:baseline;gap:14px}
+.card-h .n{font-family:'Playfair Display',serif;font-size:44px;font-weight:700;line-height:1}
+.card-h h2{font-size:11.5px;letter-spacing:2px;text-transform:uppercase;font-weight:600}
+.card ul{list-style:none;display:flex;flex-direction:column}
+.card li{font-size:14px;display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid var(--border);padding:7px 0}
+.card li .r{color:var(--muted);text-align:right}
+.card .none{color:var(--muted)}
+.board{background:var(--white);border:12px solid var(--frame);border-radius:6px;box-shadow:inset 0 0 0 1px #b9bdc3,0 3px 0 #b9bdc3,0 10px 30px rgba(10,22,40,.08);padding:28px;display:flex;flex-direction:column;gap:30px}
+.board-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.board-h h2{font-family:'Playfair Display',serif;font-size:30px}
+.status{font-size:13px;color:var(--muted)}
+.status.warn{color:#9b3a2c}
+.client h3{font-family:'Playfair Display',serif;font-size:22px;padding-bottom:8px;margin-bottom:14px;border-bottom:2px solid var(--navy)}
+.roles{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.role{border:1px solid var(--border);border-radius:4px;padding:14px;display:flex;flex-direction:column;gap:6px;min-width:0;background:#fff}
+.role-h{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:4px}
+.role-h b{font-size:16px;font-weight:600}
+.src{font:600 10.5px 'Outfit',sans-serif;letter-spacing:1px;text-transform:uppercase;border-radius:999px;padding:3px 10px;cursor:pointer;border:1px dashed var(--frame);background:transparent;color:var(--muted)}
+.src.on{background:var(--gold);border:1px solid var(--gold);color:#fff}
+.cand{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:6px 0;border-bottom:1px dotted var(--border)}
+.nm{background:none;border:0;font:inherit;font-size:15px;color:inherit;text-align:left;cursor:pointer;overflow-wrap:anywhere;min-width:0}
+.nm:hover{color:var(--gold)}
+.nm small{color:var(--muted);font-size:12px}
+.stage{font:600 11.5px 'Outfit',sans-serif;border-radius:999px;padding:4px 24px 4px 10px;border:0;cursor:pointer;-webkit-appearance:none;appearance:none;background-repeat:no-repeat;background-position:right 8px center;background-size:8px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 5'%3E%3Cpath d='M0 0l4 5 4-5z' fill='%230A1628' fill-opacity='.55'/%3E%3C/svg%3E");flex:none}
+.stage.saving{opacity:.5}
+.chip{font:600 11px 'Outfit',sans-serif;border-radius:999px;padding:2px 9px;white-space:nowrap}
+.s-Sourced{background-color:#eceef1;color:#4b5260}
+.s-Submitted{background-color:#e3ecf7;color:#2c5282}
+.s-First{background-color:#e0f2ef;color:#1f6f63}
+.s-Second{background-color:#c9ebe4;color:#145a50}
+.s-Final{background-color:#a9e0d4;color:#0e4a41}
+.s-Offer{background-color:#f6ecd4;color:#7a5a12}
+.s-Accepted{background-color:#dcefe2;color:#22643a}
+.s-Declined,.s-Rejected{background-color:#f6e1dc;color:#93372a}
+.empty{color:var(--muted);font-size:13px;font-style:italic;padding:4px 0}
+.add{background:none;border:0;color:var(--muted);font:inherit;font-size:13px;text-align:left;cursor:pointer;padding-top:4px}
+.add:hover{color:var(--navy)}
+/* login */
+.login{max-width:420px;margin:60px auto;background:#fff;border:1px solid var(--border);border-top:3px solid var(--gold);border-radius:4px;padding:32px;display:flex;flex-direction:column;gap:16px}
+.login h1{font-family:'Playfair Display',serif;font-size:30px}
+.login p{color:var(--muted);font-size:14px}
+label{display:flex;flex-direction:column;gap:6px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);font-weight:500}
+input,select.f{font:inherit;font-size:15px;color:var(--navy);border:1px solid var(--frame);border-radius:2px;padding:10px 12px;background:#fff;text-transform:none;letter-spacing:0}
+.btn{font:600 12.5px 'Outfit',sans-serif;letter-spacing:1px;text-transform:uppercase;border-radius:2px;padding:11px 20px;cursor:pointer;border:1.5px solid var(--navy);background:#fff;color:var(--navy)}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:#fff}
+.btn.del{color:#93372a;border-color:#e0b4ab;margin-right:auto}
+.btn.del.armed{background:#93372a;border-color:#93372a;color:#fff}
+.btn:disabled{opacity:.5;cursor:default}
+.err{color:#93372a;font-size:13px;min-height:1em}
+.overlay{position:fixed;inset:0;background:rgba(10,22,40,.45);display:flex;align-items:flex-start;justify-content:center;padding:70px 16px;z-index:30}
+.overlay[hidden],[hidden]{display:none!important}
+.modal{background:#fff;border-top:3px solid var(--gold);border-radius:4px;width:100%;max-width:440px;padding:24px;display:flex;flex-direction:column;gap:14px}
+.modal h4{font-family:'Playfair Display',serif;font-size:24px}
+.row{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}
+@media (max-width:860px){nav{padding:16px 20px}main{padding:24px 16px 48px}.cards{grid-template-columns:1fr}.board{border-width:6px;padding:16px}.head h1{font-size:32px}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="wordmark" href="/">ACP <em>Recruiters</em></a>
+  <div class="nav-right">
+    <span class="nav-link" id="who"></span>
+    <button class="nav-pill" id="signout" type="button" hidden>Sign out</button>
+  </div>
+</nav>
+
+<main>
+  <!-- LOGIN -->
+  <section class="login" id="login" hidden>
+    <div class="eyebrow">Team only</div>
+    <h1>Whiteboard</h1>
+    <p id="lMsg">Enter your ACP email and we'll send you a 6-digit code.</p>
+    <label id="lEmailWrap">Email<input id="lEmail" type="email" autocomplete="email"></label>
+    <label id="lCodeWrap" hidden>Code<input id="lCode" inputmode="numeric" autocomplete="one-time-code" maxlength="6"></label>
+    <div class="err" id="lErr"></div>
+    <button class="btn gold" id="lBtn" type="button">Email me a code</button>
+  </section>
+
+  <!-- BOARD -->
+  <div class="wrap" id="app" hidden>
+    <div class="head">
+      <div><div class="eyebrow">Internal</div><h1>The <em>Whiteboard</em></h1></div>
+      <div class="date" id="date"></div>
+    </div>
+    <div class="cards">
+      <section class="card"><div class="card-h"><span class="n" id="nSrc">0</span><h2>Sourcing</h2></div><ul id="lSrc"></ul></section>
+      <section class="card"><div class="card-h"><span class="n" id="nInt">0</span><h2>Interviewing</h2></div><ul id="lInt"></ul></section>
+      <section class="card"><div class="card-h"><span class="n" id="nOff">0</span><h2>Offers to Track</h2></div><ul id="lOff"></ul></section>
+    </div>
+    <section class="board">
+      <div class="board-h"><h2>Active Roles</h2><span class="status" id="status">Loading…</span></div>
+      <div id="board" style="display:flex;flex-direction:column;gap:30px"></div>
+    </section>
+  </div>
+</main>
+
+<div class="overlay" id="ov" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="mT">
+    <h4 id="mT">Add candidate</h4>
+    <label>Name<input id="fName" autocomplete="off"></label>
+    <label>Role<select class="f" id="fRole"></select></label>
+    <label>Stage<select class="f" id="fStage"></select></label>
+    <label>Interviewing with<input id="fWith" placeholder="e.g. Ricky" autocomplete="off"></label>
+    <label>Note<input id="fNote" autocomplete="off"></label>
+    <div class="err" id="fErr"></div>
+    <div class="row"><button class="btn del" id="bDel" type="button">Remove</button><button class="btn" id="bCancel" type="button">Cancel</button><button class="btn gold" id="bSave" type="button">Save</button></div>
+  </div>
+</div>
+
+<script>
+var API='https://script.google.com/macros/s/AKfycbwiWxd1NQu9iUBGyKN7Dnu--oUMqe258gRPCjfyl9kOD_gryXjMxL003QmAY0cuCM-W/exec';
+var INT=['First Interview','Second Interview','Final Interview'];
+var D={roles:[],cands:[],stages:[]}, editing=null, token=null, email=null;
+function $(i){return document.getElementById(i)}
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function sk(s){return 's-'+String(s).split(' ')[0]}
+function chip(s){return '<span class="chip '+sk(s)+'">'+esc(String(s).replace(' Interview',' Int.'))+'</span>'}
+function role(id){for(var i=0;i<D.roles.length;i++)if(D.roles[i].id===id)return D.roles[i];return null}
+function li(a,b){return '<li><span>'+a+'</span><span class="r">'+b+'</span></li>'}
+function store(k,v){try{if(v==null)localStorage.removeItem(k);else localStorage.setItem(k,v)}catch(e){}}
+function recall(k){try{return localStorage.getItem(k)}catch(e){return null}}
+
+function api(body){
+  if(token)body.token=token;
+  return fetch(API,{method:'POST',body:JSON.stringify(body)}).then(function(r){return r.json()}).then(function(j){
+    if(j.error==='auth'){signOut();throw new Error('Please sign in again.')}
+    if(j.error)throw new Error(j.error);return j});
+}
+
+/* ----- login ----- */
+var step='email';
+function showLogin(){$('app').hidden=true;$('login').hidden=false;$('signout').hidden=true;$('who').textContent='';step='email';
+  $('lEmailWrap').hidden=false;$('lCodeWrap').hidden=true;$('lBtn').textContent='Email me a code';$('lMsg').textContent="Enter your ACP email and we'll send you a 6-digit code.";$('lErr').textContent='';$('lBtn').disabled=false}
+$('lBtn').onclick=function(){
+  $('lErr').textContent='';$('lBtn').disabled=true;
+  if(step==='email'){
+    email=$('lEmail').value.trim().toLowerCase();if(!email){$('lErr').textContent='Enter your email.';$('lBtn').disabled=false;return}
+    api({action:'requestCode',email:email}).then(function(){step='code';$('lEmailWrap').hidden=true;$('lCodeWrap').hidden=false;$('lBtn').textContent='Sign in';
+      $('lMsg').textContent='If '+email+' is on the team list, a code is on its way. Check your inbox.';$('lBtn').disabled=false;$('lCode').focus()})
+    .catch(function(e){$('lErr').textContent=e.message;$('lBtn').disabled=false});
+  }else{
+    api({action:'verify',email:email,code:$('lCode').value}).then(function(j){token=j.token;store('acp_wb_token',token);store('acp_wb_email',j.email);email=j.email;start()})
+    .catch(function(e){$('lErr').textContent=e.message;$('lBtn').disabled=false});
+  }
+};
+['lEmail','lCode'].forEach(function(id){$(id).addEventListener('keydown',function(e){if(e.key==='Enter')$('lBtn').click()})});
+function signOut(){token=null;store('acp_wb_token',null);showLogin()}
+$('signout').onclick=signOut;
+
+/* ----- board ----- */
+function start(){$('login').hidden=true;$('app').hidden=false;$('signout').hidden=false;$('who').textContent=email||'';load()}
+function load(){$('status').textContent='Loading…';api({action:'getBoard'}).then(function(j){D=j;$('status').textContent='';$('status').className='status';render()})
+  .catch(function(e){$('status').textContent=e.message;$('status').className='status warn'})}
+
+function render(){
+  $('date').textContent=new Date().toLocaleDateString([], {weekday:'long',month:'long',day:'numeric'});
+  var src=D.roles.filter(function(r){return r.sourcing&&r.onBoard});
+  $('nSrc').textContent=src.length;
+  $('lSrc').innerHTML=src.map(function(r){return li('<b>'+esc(r.role)+'</b>',esc(r.client))}).join('')||'<li class="none">Nothing sourcing</li>';
+  var ints=D.cands.filter(function(c){return INT.indexOf(c.stage)>=0});
+  $('nInt').textContent=ints.length;
+  $('lInt').innerHTML=ints.map(function(c){var r=role(c.roleId);return li('<b>'+esc(c.name)+'</b> '+chip(c.stage),esc((r?r.role:'')+(c.with?' · '+c.with:'')))}).join('')||'<li class="none">No interviews</li>';
+  var offs=D.cands.filter(function(c){return c.stage==='Offer'});
+  $('nOff').textContent=offs.length;
+  $('lOff').innerHTML=offs.map(function(c){var r=role(c.roleId);return li('<b>'+esc(c.name)+'</b>',esc(r&&r.onBoard?r.client+' · '+r.role:(c.note||'')))}).join('')||'<li class="none">No open offers</li>';
+  var groups=[];D.roles.filter(function(r){return r.onBoard}).forEach(function(r){var g=groups.filter(function(x){return x.name===r.client})[0];if(!g){g={name:r.client,roles:[]};groups.push(g)}g.roles.push(r)});
+  var opts=function(sel){return D.stages.map(function(s){return '<option'+(s===sel?' selected':'')+'>'+esc(s)+'</option>'}).join('')};
+  $('board').innerHTML=groups.map(function(g){
+    return '<div class="client"><h3>'+esc(g.name)+'</h3><div class="roles">'+g.roles.map(function(r){
+      var cs=D.cands.filter(function(c){return c.roleId===r.id}).sort(function(a,b){return D.stages.indexOf(b.stage)-D.stages.indexOf(a.stage)});
+      return '<div class="role"><div class="role-h"><b>'+esc(r.role)+'</b><button class="src'+(r.sourcing?' on':'')+'" type="button" data-src="'+esc(r.id)+'">'+(r.sourcing?'Sourcing':'Not sourcing')+'</button></div>'+
+        (cs.length?cs.map(function(c){return '<div class="cand"><button class="nm" type="button" data-c="'+esc(c.id)+'" title="Edit">'+esc(c.name)+(c.with?' <small>w/ '+esc(c.with)+'</small>':'')+'</button>'+
+          '<select class="stage '+sk(c.stage)+'" data-stage="'+esc(c.id)+'" aria-label="Stage for '+esc(c.name)+'">'+opts(c.stage)+'</select></div>'}).join(''):'<span class="empty">No candidates yet</span>')+
+        '<button class="add" type="button" data-add="'+esc(r.id)+'">+ Add candidate</button></div>'}).join('')+'</div></div>'}).join('');
+}
+function cand(id){return D.cands.filter(function(x){return x.id===id})[0]}
+function persist(c,el){return api({action:'saveCandidate',c:c}).catch(function(e){$('status').textContent='Not saved: '+e.message;$('status').className='status warn';throw e})}
+
+$('board').addEventListener('change',function(e){
+  var sel=e.target.closest('[data-stage]');if(!sel)return;var c=cand(sel.dataset.stage);var prev=c.stage;c.stage=sel.value;
+  sel.className='stage saving '+sk(c.stage);
+  persist(c).then(function(){render()}).catch(function(){c.stage=prev;render()});
+});
+$('board').addEventListener('click',function(e){
+  var s=e.target.closest('[data-src]');if(s){var r=role(s.dataset.src);r.sourcing=!r.sourcing;render();
+    api({action:'setSourcing',roleId:r.id,on:r.sourcing}).catch(function(err){r.sourcing=!r.sourcing;render();$('status').textContent='Not saved: '+err.message});return}
+  var a=e.target.closest('[data-add]');if(a){openM(null,a.dataset.add);return}
+  var n=e.target.closest('[data-c]');if(n)openM(cand(n.dataset.c));
+});
+
+function openM(c,roleId){
+  editing=c;$('mT').textContent=c?c.name:'Add candidate';
+  $('fRole').innerHTML=D.roles.map(function(r){return '<option value="'+esc(r.id)+'">'+esc(r.client==='Other'?r.role:r.client+' · '+r.role)+'</option>'}).join('');
+  $('fStage').innerHTML=D.stages.map(function(s){return '<option>'+esc(s)+'</option>'}).join('');
+  $('fName').value=c?c.name:'';$('fRole').value=c?c.roleId:roleId;$('fStage').value=c?c.stage:'Sourced';$('fWith').value=c?(c.with||''):'';$('fNote').value=c?(c.note||''):'';
+  $('bDel').hidden=!c;$('bDel').classList.remove('armed');$('bDel').textContent='Remove';$('fErr').textContent='';$('bSave').disabled=false;
+  $('ov').hidden=false;setTimeout(function(){$('fName').focus()},30);
+}
+function closeM(){$('ov').hidden=true;editing=null}
+$('bCancel').onclick=closeM;
+$('ov').addEventListener('click',function(e){if(e.target===$('ov'))closeM()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeM()});
+$('bSave').onclick=function(){
+  var c={id:editing?editing.id:'',roleId:$('fRole').value,name:$('fName').value.trim(),stage:$('fStage').value,with:$('fWith').value.trim(),note:$('fNote').value.trim()};
+  if(!c.name){$('fErr').textContent='Add a name.';return}
+  $('bSave').disabled=true;
+  api({action:'saveCandidate',c:c}).then(function(j){c.id=j.id;if(editing){for(var k in c)editing[k]=c[k]}else D.cands.push(c);closeM();render()})
+    .catch(function(e){$('fErr').textContent=e.message;$('bSave').disabled=false});
+};
+$('bDel').onclick=function(){
+  var b=$('bDel');if(!b.classList.contains('armed')){b.classList.add('armed');b.textContent='Click again to remove';return}
+  var id=editing.id;api({action:'deleteCandidate',id:id}).then(function(){D.cands=D.cands.filter(function(x){return x.id!==id});closeM();render()})
+    .catch(function(e){$('fErr').textContent=e.message});
+};
+setInterval(function(){if(token&&$('ov').hidden&&!document.hidden)api({action:'getBoard'}).then(function(j){D=j;render()}).catch(function(){})},120000);
+
+token=recall('acp_wb_token');email=recall('acp_wb_email');
+if(token)start();else showLogin();
+</script>
+</body>
+</html>
